@@ -75,7 +75,7 @@
 + (CALayer*)roundedRectLayerWithClass:(NSString*)className size:(CGSize)size
 {
     CALayer *layer = [CALayer layer];
-    [layer setFrame:CGRectMake(0, 0, size.width, size.height)];
+    [layer setFrame:CGRectMake(0, 0, 50, 50)];
     [layer setMasksToBounds:YES];
     
     if ([NUISettings hasProperty:@"background-color" withClass:className]) {
