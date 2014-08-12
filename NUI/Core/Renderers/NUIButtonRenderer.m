@@ -168,6 +168,7 @@
     
     // We need to apply the corner radius to all sublayers so that the shadow displays correctly
     if ([NUISettings hasProperty:@"corner-radius" withClass:className]) {
+        [button.layer setMasksToBounds:YES];
         CGFloat r = [NUISettings getFloat:@"corner-radius" withClass:className];
         for (CALayer* layer in button.layer.sublayers) {
             layer.cornerRadius = r;
